@@ -1,0 +1,15 @@
+/* */
+* { font-family: "Ubuntu", sans-serif; }
+
+header .menu-wrapper-list { list-style: none; }
+
+footer .copyright { text-align: center; }
+
+body .content { padding: 0 5%; }
+body .content #person { position: relative; width: 30%; margin: 0 auto; }
+body .content #person-title { text-align: center; }
+body .content #person-photo { position: relative; width: 30%; margin: 0 auto; }
+body .content #person-photo img { width: 100%; border-radius: 50%; }
+body .content #person-desc { text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
