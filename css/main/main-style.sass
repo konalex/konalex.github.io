@@ -1,0 +1,132 @@
+@import ../template.sass
+//
+body
+    max-width: 1024px
+    min-height: 120vh
+
+    position: relative
+
+    margin: 0 auto
+
+    font-family: 'Ubuntu', sans-serif
+
+    overflow-x: hidden
+    .main-content
+        padding: 40px 5px 30px 5px
+        .page-description
+            height: 100px
+
+            background-color: $main-color
+            color: #cccccc
+            .container
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+
+                text-align: center
+        &__container
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            padding: 0 205px 0 0
+
+            box-shadow: 0 0 3px 0 $main-color
+            .always-visible
+                width: 200px
+                float: right
+
+                position: absolute
+                right: 5px
+                top: 151px
+
+                border-left: 1px solid $main-color
+            .with-padding
+                padding: 5px
+                float: left
+            .float-right
+                float: right
+        .out-content
+            position: fixed
+            top: 42px
+
+            height: calc(100vh - 40px)
+            width: 300px
+            
+            z-index: 91
+
+            transition: all 250ms
+
+            background-color: #ffffff
+
+            box-shadow: 0 0 3px #cccccc
+            h3
+                text-align: center
+            .aside-close
+                position: absolute
+
+                width: 20px
+                height: 20px
+                
+                border-radius: 50%
+                
+                cursor: pointer
+
+                transition: all 250ms
+
+                display: flex
+                justify-content: center
+                align-items: center
+                &:before, &:after
+                    content: ''
+
+                    position: absolute
+                    top: 50%
+
+                    display: block
+
+                    width: 70%
+                    height: 1px
+
+                    background-color: $main-color
+
+                    transform: translate(50%, 0)
+                &:before
+                    transform: rotate(135deg)
+                &:after
+                    transform: rotate(45deg)
+                &:hover
+                    box-shadow: 0 0 3px 0 #cccccc
+                    transform: rotate(90deg) scale(1.2)
+            &.left
+                left: -300px
+                .aside-close
+                    right: 5px
+            &.right
+                right: -300px
+                .aside-close
+                    left: 5px
+            &.active
+                &.left
+                    left: 0
+                &.right
+                    right: 0
+@media screen and (max-width: 768px)
+    body
+        .main-content
+            .page-description
+                font-size: 13px
+            &__container
+                padding: 0
+                &>.container
+                    padding: 5px 5px 5px 5px
+                .always-visible
+                    top: 140px
+                    
+                    width: calc(100% - 10px)
+                    
+                    background-color: #ffffff
+
+                    border-left: none
+                    border-bottom: 1px solid $main-color

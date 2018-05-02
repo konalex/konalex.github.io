@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/konalex/konalex.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/konalex/konalex.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Реализовано:
+1. Макет по примеру (https://image.prntscr.com/image/dDOVGYKmQB_i0xppnnCx_A.jpg).
+2. Фиксированный header.
+3. Закрепленный внизу, но не фиксированный footer.
+4. Две боковые панели.
+4.1. При активном состоянии панели "наезжают" на контент. При закрытом - "скрываются" за экраном.
+5. Максимальная ширина контейнера - 1024 пикселя.
+6. Внутри контейнера после описания страницы закрепленный блок.
+Особенности:
+1. Разметка блоков, того требующих была реализована на свойстве flex.
+2. Все стили написаны с использованием процепроцессора SASS.
+3. Реализована мультибраузерность.
+3.1. И на мобильных браузерах.
+4. Минимальное разрешение экрана для мобильных устройств - 320 пикселей.
+5. Разметка в блочном стиле.
+5.1. Стили написаны аккуратно, в файлах sass - соблюдается разбиение на категории стилей.
+5.1.1. Стили при компиляции минификуются.
+6. Код написан в едином стиле для языка.
+6.1. В HTML разметке использовал БЭМ методологию.
+6.2. В SASS коде использовал вложенность.
+6.3. В JS коде реализовал все действия через функции.
+7. Придерживался одного стиля для макета.
+7.1. Шрифт - Ubuntu.
+7.2. Цвет - "мокрый асфальт".

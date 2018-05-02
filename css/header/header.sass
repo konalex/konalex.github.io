@@ -1,0 +1,148 @@
+@import ../template.sass
+// 
+header
+    height: 40px
+    width: 100%
+    max-width: 1024px
+
+    position: fixed
+    top: 0
+
+    box-shadow: 0 1px 3px 0 $main-color
+
+    background-color: #ffffff
+
+    overflow: hidden
+    z-index: 99
+    .container
+        display: flex
+        flex-direction: row
+        justify-content: safe
+        align-items: center
+        .header-logo
+            height: 20px
+            width: 20px
+
+            margin: 0 0 0 5px
+
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            background-image: url(../../files/img/header/logo.png)
+        .header-menu
+            margin: 0 0 0 350px
+            &__list
+                list-style: none
+                display: flex
+                flex-direction: row
+                align-items: center
+                &-item
+                    margin: 0 15px
+                    padding: 0 0 5px 0
+
+                    position: relative
+
+                    transition: all 250ms
+                    
+                    a
+                        position: relative
+
+                        text-decoration: none
+                        text-transform: lowercase
+                        color: $main-color
+
+                        transition: all 250ms
+
+                        padding: 0 0 5px 5px
+                        &:before
+                            content: ''
+
+                            display: block
+
+                            position: absolute
+
+                            left: 0
+
+                            height: 0
+                            width: 1px
+
+                            background-color: $main-color
+
+                            bottom: 0
+
+                            transition: all 250ms
+                        &:after
+                            content: ''
+
+                            display: block
+
+                            position: absolute
+
+                            height: 1px
+                            width: 0
+                            
+                            background-color: $main-color
+
+                            bottom: 0
+                            right: 0
+
+                            transition: all 250ms
+                        &:hover
+                            &:after
+                                width: 100%
+                                left: 0
+                        &.active
+                            &:before
+                                height: 100%
+            .aside-switcher
+                display: flex
+                flex-direction: row
+                &__button
+                    position: relative
+
+                    padding: 5px
+                    margin: 5px
+
+                    text-align: center
+
+                    cursor: pointer
+
+                    transition: all 250ms
+
+                    width: 15px
+                    height: 15px
+
+                    line-height: 15px
+
+                    border-radius: 50%
+                    
+                    &:hover
+                        box-shadow: 0 0 3px 0 #cccccc
+                    &.active
+                        background-color: $main-color
+                        
+                        color: #cccccc
+                        svg
+                            g
+                                path
+                                    fill: #cccccc
+                    &.left
+                        &.active
+                            transform: rotate(-180deg)                        
+                    &.right
+                        transform: rotate(-180deg)
+                        &.active
+                            transform: rotate(0deg)
+@media screen and (max-width: 768px)
+    header
+        .container
+            .header-logo
+                margin: 0 5px
+            .header-menu
+                margin: 0
+
+                position: relative
+                top: 0
+                left: 0
+                &__list-item
+                    margin: 0 5px
