@@ -1,6 +1,6 @@
 Реализовано:
 
-1. Макет по примеру (https://image.prntscr.com/image/dDOVGYKmQB_i0xppnnCx_A.jpg).
+1. Макет по [примеру](https://image.prntscr.com/image/dDOVGYKmQB_i0xppnnCx_A.jpg).
 2. Фиксированный header.
 3. Закрепленный внизу, но не фиксированный footer.
 4. Две боковые панели.
